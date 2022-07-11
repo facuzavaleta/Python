@@ -80,14 +80,14 @@ def winner():
     global SetsJugador1, SetsJugador2
 
     if SetsJugador1 > 2:
-        print(f"\nGana Jugador 1 {SetsJugador1} a {SetsJugador2}!")
-        nuevoJuego = input("\nDesea jugar nuevamente: [y] o [n] -> ")
+        print(f"\nGana Jugador 1 - Sets: {SetsJugador1} a {SetsJugador2}.")
+        marcador()
         newGame()
         
 
     elif SetsJugador2 > 2:
-        print(f"\nGana Jugador 2! {SetsJugador2} a {SetsJugador1}")
-        nuevoJuego = input("Desea jugar nuevamente: [y] o [n] -> ")
+        print(f"\nGana Jugador 2 - Sets: {SetsJugador2} a {SetsJugador1}.")
+        marcador()
         newGame()
 
     else:
@@ -102,7 +102,7 @@ def marcador():
 ==============================\n""")
 
 def game():
-    global punto, PuntosJugador1, PuntosJugador2, GamesJugador1, GamesJugador2, SetsJugador1, SetsJugador2
+    global punto, PuntosJugador1, PuntosJugador2, GamesJugador1, GamesJugador2, SetsJugador1, SetsJugador2, GamesJugador1, GamesJugador2
 
     start = input(f"""
                             =======================================================
@@ -133,20 +133,20 @@ def game():
             if punto == 1:
 
                 if PuntosJugador1 == 40 and PuntosJugador2 == "Adv":
-                    print("\nPunto Jugador 1!")
+                    print("\nPunto jugador 1!")
                     PuntosJugador2 = 40
                     marcador()
                 elif PuntosJugador1 == 40 and PuntosJugador2 == 40:
-                    print("\nVentaja Jugador 1!")
+                    print("\nVentaja jugador 1!")
                     PuntosJugador1 = "Adv"
                     marcador()
                 elif PuntosJugador1 == "Adv":
-                    print ("\nPunto Jugador 1! Game jugador 1")
+                    print ("\nPunto jugador 1! Game jugador 1")
                     GamesJugador1 += 1    
                     resetPoints()            
                     marcador()            
                 elif PuntosJugador1 == 40 and PuntosJugador2 < 40:
-                    print ("\nPunto Jugador 1! Game jugador 1")
+                    print ("\nPunto jugador 1! Game jugador 1")
                     GamesJugador1 += 1
                     resetPoints()
                     marcador()
@@ -162,20 +162,20 @@ def game():
             elif punto == 2:
 
                 if PuntosJugador2 == 40 and PuntosJugador1 == "Adv":
-                    print("\nPunto Jugador 2!")
+                    print("\nPunto jugador 2!")
                     PuntosJugador1 = 40
                     marcador()
                 elif PuntosJugador2 == 40 and PuntosJugador1 == 40:
-                    print("\nVentaja Jugador 2!")
+                    print("\nVentaja jugador 2!")
                     PuntosJugador2 = "Adv"
                     marcador()
                 elif PuntosJugador2 == "Adv":
-                    print ("\nPunto Jugador 2! Game jugador 2")
+                    print ("\nPunto jugador 2! Game jugador 2")
                     GamesJugador2 += 1
                     resetPoints()
                     marcador()         
                 elif PuntosJugador2 == 40 and PuntosJugador1 < 40:
-                    print ("\nPunto Jugador 2! Game jugador 2")
+                    print ("\nPunto jugador 2! Game jugador 2")
                     GamesJugador2 += 1
                     resetPoints()
                     marcador()
